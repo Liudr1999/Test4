@@ -49,9 +49,9 @@ public class Doctorate implements StudentInterface,TeacherInterface
 3、while循环
 ```
 while(salary<=0){		
-			System.out.println("工资不能为0，请重新输入：");
-			salary = reader.nextInt();
-		}
+	System.out.println("工资不能为0，请重新输入：");
+	salary = reader.nextInt();
+}
 ```
 当输入的salary（工资）<=0时，将会跳出“工资不能为0，请重新输入：”的语句，直到salary>0时程序继续进行。  
 
@@ -66,7 +66,7 @@ while(salary<=0){
 5、接口变量中存放对象的引用
 ```
      student = new Doctorate();
-		 teacher = new Doctorate();
+     teacher = new Doctorate();
 ```
 
 
@@ -82,7 +82,7 @@ while(salary<=0){
 7、实现输入
 ```
        g.pay= reader.nextInt();					//输入学费
-			 student.setPay(g.pay);	          ////接口回调
+       student.setPay(g.pay);	          			//接口回调
 ```
 令Doctorate的实例化对象g中的变量pay实现输入，并让Student接口变量中的setPay方法回调。  
 
@@ -90,18 +90,18 @@ while(salary<=0){
 8、定义变量
 ```
        int yearS = teacher.getSalary()*12;		//年收入=月收入*12个月
-			 int pain =yearS-student.getPay();			//实际年收入=年收入-学费
-			 final double tax =(pain-5000*12)*0.1;		//应缴个人所得税
+       int pain =yearS-student.getPay();		//实际年收入=年收入-学费
+       final double tax =(pain-5000*12)*0.1;		//应缴个人所得税
 ```
 字Test主类中定义了三个变量分别代表年收入、实际年收入和应缴的个人所得税。根据国家规定，年收入在36000~144000之间的收入对应10%的税率。  
 
 
 9、判断
 ```
-			 if(pain<=5000*12)
-				 System.out.println("由于您的实际年收入("+pain+")小于等于6万元, 所以不够缴纳所得税。"+"\n");    
-			 else     
-				 System.out.println("您的实际年收入为"+pain+"元, 需纳税："+tax+"元"+"\n");
+	 if(pain<=5000*12)
+		System.out.println("由于您的实际年收入("+pain+")小于等于6万元, 所以不够缴纳所得税。"+"\n");    
+	 else     
+		System.out.println("您的实际年收入为"+pain+"元, 需纳税："+tax+"元"+"\n");
 ```
 同样根据国家规定，每月的起征点是5000元，按年算就是6万元一年，故有此判断出现。  
 
@@ -118,13 +118,13 @@ catch(Exception e){
 当try中的语句出现异常时，会显示"请检查您输入的是否有误！"。  
 
 # 七、实验结果
-1、当学费为0时，输入的结果
+1、当学费为0时，输入的结果  
 ![Image text](https://github.com/Liudr1999/Test4-interface/blob/main/%E5%AD%A6%E7%94%9F%E4%B8%80.JPG)  
 
-2、正常输入
+2、正常输入  
 ![Image text](https://github.com/Liudr1999/Test4-interface/blob/main/%E5%AD%A6%E7%94%9F%E4%BA%8C.JPG)
 
-3、异常处理
+3、异常处理  
 ![Image text](https://github.com/Liudr1999/Test4-interface/blob/main/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86.JPG)
 
 
